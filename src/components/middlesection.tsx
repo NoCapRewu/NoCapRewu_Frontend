@@ -1,22 +1,25 @@
-import { UserInfo } from "./userinfo"
-import { MiddleLeft } from "./middle_left"
-import { MiddleRight } from "./middle_right"
+import { UserInfo } from "./userinfo";
+import { MiddleLeft } from "./middle_left";
+import { MiddleRight } from "./middle_right";
 
 export function MiddleSection() {
-    return(
-        <div className="flex flex-col h-full">
-            <div className="h-[10%] border-b border-black">
-                <UserInfo />
-            </div>
-            
-            <div className="h-[90%] flex flex-row">
-                <div className="w-[45%] border-r border-black">
-                    <MiddleLeft/>
-                </div>
-                <div className="w-[59%]">
-                    <MiddleRight/>
-                </div>
-            </div>
+  return (
+    <div className="flex flex-col h-full min-h-screen">
+      {/* Top area — banner. keep as percentage of the available middle column height */}
+      <div className="h-[10%] min-h-[68px] border-b border-black">
+        <UserInfo />
+      </div>
+
+      {/* content area uses remaining height */}
+      <div className="flex-1 flex flex-row h-[90%]">
+        {/* Use flex-basis via percent widths - they will be relative to the middle area */}
+        <div className="basis-[45%] border-r border-black h-full overflow-auto">
+          <MiddleLeft />
         </div>
-    )
+        <div className="basis-[55%] h-full overflow-auto">
+          <MiddleRight />
+        </div>
+      </div>
+    </div>
+  );
 }

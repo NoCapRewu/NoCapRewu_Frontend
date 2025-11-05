@@ -13,7 +13,7 @@ export function MiddleSection() {
                 <div className="w-[45%] border-r border-black">
                     <MiddleLeft/>
                 </div>
-                <div className="w-[59%]">
+                <div className="w-[55%]">
                     <MiddleRight/>
                 </div>
             </div>

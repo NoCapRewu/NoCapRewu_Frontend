@@ -1,7 +1,7 @@
-export function LeftSidebar() {
-    return (
+export function LeftSidebar(){
+    return(
         <div>
-            LeftSidebar
+            LeftSideBar
         </div>
     )
 }

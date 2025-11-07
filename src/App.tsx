@@ -1,9 +1,10 @@
 import { Button } from "./components/ui/button"
+import { HeroSection } from "./components/herosection"
 
 function App() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <Button>Click me</Button>
+      <HeroSection/>
     </div>
   )
 }
